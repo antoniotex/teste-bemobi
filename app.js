@@ -12,7 +12,8 @@ app.use(express.static(__dirname + '/public'));
 //Cria entrada do banco de dados
 app.get('/new/:urlToShorten(*)', (req, res, next) => {
     var { urlToShorten } = req.params;
-    console.log(urlToShorten)
+    console.log(urlToShorten);
+    return res.json({ urlToShorten });
 });
 
 
