@@ -2,7 +2,7 @@
   "name": "shortner-bemobi",
   "version": "1.0.0",
   "description": "Um pequeno projeto para testar suas habilidades como programador.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/antoniotex/hire.me/issues"
   },
-  "homepage": "https://github.com/antoniotex/hire.me#readme"
+  "homepage": "https://github.com/antoniotex/hire.me#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.15"
+  }
 }
