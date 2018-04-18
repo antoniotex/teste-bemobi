@@ -1,0 +1,19 @@
+{
+  "name": "shortner-bemobi",
+  "version": "1.0.0",
+  "description": "Um pequeno projeto para testar suas habilidades como programador.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoniotex/hire.me.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoniotex/hire.me/issues"
+  },
+  "homepage": "https://github.com/antoniotex/hire.me#readme"
+}
