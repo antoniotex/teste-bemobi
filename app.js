@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const shortUrl = require('./models/shortUrl');
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -12,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 //Cria entrada do banco de dados
 app.get('/new/:urlToShorten(*)', (req, res, next) => {
     var { urlToShorten } = req.params;
-    console.log(urlToShorten);
+
     return res.json({ urlToShorten });
 });
 
