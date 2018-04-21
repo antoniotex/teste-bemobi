@@ -36,18 +36,31 @@ app.get('/new/:urlToShorten(*)', (req, res, next) => {
            }
         });
 
-        return res.json({data});
+        return res.json(data);
     }
     var data = new shortUrl(
         {
-            originalUrl: urlToShorten,
+            originalUrl: 'Sem dados correspondentes',
             shorterUrl: 'URL Invalida'
         }
     );
     return res.json({data});
 });
 
-
+//Consulta banco de dados e retorna url original
+app.get('/:urlToForward', (req, res, next) => {
+    var shorterUrl = req.params.urlToForward;
+    shortUrl.findOne({'shorterUrl': shorterUrl}, (err, data) => {
+        if(err) return res.send('Erro na leitura do banco de dados');
+        var re = new RegExp("^(http|https)://", "i");
+        var strToCheck = data.originalUrl;
+        if(re.test(strToCheck)){
+            res.redirect(301, data.originalUrl);
+        }else{
+            res.redirect(301, 'http://' + data.originalUrl);
+        }
+    });
+});
 
 
 
